@@ -1,73 +1,280 @@
-# Welcome to your Lovable project
+# Superteam Academy — Frontend MVP
 
-## Project info
+Production-ready MVP frontend for the Superteam Academy platform — a gamified learning management system (LMS) designed to onboard and educate Solana developers through interactive courses, coding challenges, and on-chain credential integration.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This implementation provides a scalable, modular frontend architecture ready to integrate with the Superteam Academy Anchor program for XP tokens, credentials, and achievements.
 
-## How can I edit this code?
+Live Demo:
+[https://solana-academy-pro-learn.vercel.app/]
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+# Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Superteam Academy is an interactive education platform for Solana developers, combining structured courses, coding challenges, and gamification to create an engaging learning experience.
 
-Changes made via Lovable will be committed automatically to this repo.
+This frontend MVP enables users to:
 
-**Use your preferred IDE**
+* Browse and explore courses
+* View lessons and complete coding challenges
+* Track XP and level progression
+* View dashboard and learning progress
+* Manage user profile and credentials (integration-ready)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The architecture is designed with clean abstractions to support seamless integration with on-chain Solana programs.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+# Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Frontend Framework
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* React
+* Vite
 
-# Step 3: Install the necessary dependencies.
-npm i
+Language
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+* TypeScript (strict mode)
+
+Styling and UI
+
+* Tailwind CSS
+* shadcn/ui component system
+
+State and Architecture
+
+* Modular component-based architecture
+* Service abstraction layer for future on-chain integration
+
+Deployment
+
+* Vercel
+
+Development Tools
+
+* Node.js
+* npm
+
+---
+
+# Project Structure
+
+```bash
+app/
+  src/
+    components/     # Reusable UI components
+    pages/          # Application pages
+    test/           # Set up
+    hooks/          # Custom React hooks
+    utils/          # Utility functions
+  public/           # Static assets
+  package.json
+  vite.config.ts
+```
+
+---
+
+# Local Development Setup
+
+## Prerequisites
+
+Install the following:
+
+* Node.js (v18 or later recommended)
+* npm or yarn
+
+Check version:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Lishguy/solana-academy-pro.git
+```
+
+Navigate to the frontend folder:
+
+```bash
+cd solana-academy-pro
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Run Development Server
+
+Start the local development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Application will run at:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Environment Variables
 
-## What technologies are used for this project?
+Create a `.env` file inside `/app`:
 
-This project is built with:
+```bash
+touch .env
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Example environment variables:
 
-## How can I deploy this project?
+```env
+VITE_APP_NAME=Solana-Academy-Pro
+VITE_ENV=development
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Optional (for analytics / integrations):
 
-## Can I connect a custom domain to my Lovable project?
+```env
+VITE_GA_ID=your_google_analytics_id
+VITE_SENTRY_DSN=your_sentry_dsn
+```
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Build for Production
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+To build the application:
+
+```bash
+npm run build
+```
+
+To preview production build:
+
+```bash
+npm run dev
+```
+
+---
+
+# Deployment
+
+This project is deployed using Vercel.
+
+Production deployment:
+[https://solana-academy-pro-learn.vercel.app/]
+
+To deploy manually:
+
+```bash
+npm run build
+```
+
+Then deploy the `/dist` folder to:
+
+* Vercel (recommended)
+* Netlify
+* or any static hosting provider
+
+---
+
+# Gamification System (Integration-Ready)
+
+The frontend includes a gamification architecture compatible with the Superteam Academy on-chain program.
+
+Implemented:
+
+* XP tracking interface
+* Level calculation logic
+* Progress tracking system
+* Credential display architecture
+
+Ready for integration with:
+
+* Solana Token-2022 XP tokens
+* Metaplex credential NFTs
+* Achievement system
+* Leaderboard indexing
+
+---
+
+# Architecture Design
+
+Key principles:
+
+* Modular architecture
+* Clean separation of concerns
+* Service abstraction layer
+* On-chain integration readiness
+* Scalable and maintainable structure
+
+This ensures seamless future integration with the Anchor program located in:
+
+```bash
+/onchain-academy
+```
+
+---
+
+# Implemented MVP Features
+
+* Landing page
+* Course catalog
+* Course detail pages
+* Lesson viewer
+* Challenge interface with code editor
+* User dashboard with XP tracking
+* User profile page
+* Gamification system (stub integration-ready)
+* Responsive modern UI
+
+---
+
+# Performance and Optimization
+
+Optimized for:
+
+* Fast load times
+* Efficient rendering
+* Responsive layout
+* Production-ready build optimization
+
+---
+
+# Contribution
+
+This frontend implementation is submitted as part of the Superteam Academy bounty and integrated into the monorepo structure under:
+
+```bash
+/app
+```
+
+---
+
+# Author
+
+Michael
+Frontend Developer — Web3 Builder
+
+---
+
+# License
+
+Open-source and available under the MIT License.
+
+---
+
+
